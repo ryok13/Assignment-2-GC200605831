@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="650.0" style="-fx-background-color: #f2d694;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.georgiancollege.assignment2gc200605831.DogImagesController">
+   <children>
+      <Label layoutX="240.0" layoutY="23.0" text="~ Dog Pictures ~" textFill="#2d911c">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="26.0" layoutY="73.0" prefHeight="310.0" prefWidth="600.0" spacing="30.0">
+         <children>
+            <VBox prefHeight="310.0" prefWidth="233.0" style="-fx-alignment: CENTER;">
+               <children>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="45.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER">
+                           <image>
+                              <Image url="@images/double-pow-icon.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="39.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                           <image>
+                              <Image url="@images/double-pow-icon.png" />
+                           </image></ImageView>
+                        <Label fx:id="breedLabel" alignment="CENTER" prefHeight="30.0" prefWidth="213.0" text="Label" textFill="#2d911c" underline="true" GridPane.columnSpan="3" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="25.0" />
+                     </VBox.margin>
+                  </GridPane>
+                  <Button fx:id="showAnotherBtn" mnemonicParsing="false" onAction="#onShowAnotherClicked" prefHeight="29.0" prefWidth="119.0" text="Show Another" textFill="#2d911c">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="backBtn" mnemonicParsing="false" onAction="#onBackClicked" text="Back" textFill="#2d911c">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="310.0" prefWidth="351.0" spacing="10.0">
+               <children>
+                  <HBox prefHeight="191.0" prefWidth="345.0">
+                     <children>
+                        <ImageView fx:id="dogImg1" fitHeight="150.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="dogImg2" fitHeight="150.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+                  <ImageView fx:id="dogImg3" fitHeight="151.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

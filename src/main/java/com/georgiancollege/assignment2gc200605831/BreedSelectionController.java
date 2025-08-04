@@ -121,7 +121,7 @@ public class BreedSelectionController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("dog-images-view.fxml"));
             Scene scene = new Scene(loader.load());
 
-            BreedDetailController controller = loader.getController();
+            DogImagesController controller = loader.getController();
             controller.setBreed(breed);
 
             Stage stage = (Stage) breedTable.getScene().getWindow();
