@@ -58,7 +58,7 @@
                         <Insets bottom="25.0" />
                      </VBox.margin>
                   </GridPane>
-                  <Button fx:id="showAnotherBtn" mnemonicParsing="false" onAction="#onShowAnotherClicked" prefHeight="29.0" prefWidth="119.0" text="Show Another" textFill="#2d911c">
+                  <Button mnemonicParsing="false" onAction="#onShowAnotherClicked" prefHeight="29.0" prefWidth="119.0" text="Show Another" textFill="#2d911c">
                      <font>
                         <Font size="14.0" />
                      </font>

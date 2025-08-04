@@ -43,7 +43,7 @@
           <TableColumn fx:id="breedColumn" prefWidth="157.33328247070312" style="-fx-background-color: #e39f40; -fx-alignment: CENTER;" text="Breed" />
         </columns>
       </TableView>
-      <Button fx:id="showDogBtn" layoutX="438.0" layoutY="306.0" mnemonicParsing="false" onAction="#onShowDogBtnClick" text="Show Dog" textFill="#2d911c">
+      <Button layoutX="438.0" layoutY="306.0" mnemonicParsing="false" onAction="#onShowDogBtnClick" text="Show Dog" textFill="#2d911c">
          <font>
             <Font size="14.0" />
          </font>

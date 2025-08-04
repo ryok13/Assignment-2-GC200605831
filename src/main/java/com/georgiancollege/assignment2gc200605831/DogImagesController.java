@@ -1,6 +1,5 @@
 package com.georgiancollege.assignment2gc200605831;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -13,6 +12,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.List;
 
+// Controller class for the dog image view screen / Displays random images of the selected dog breed and allows reloading or going back
 public class DogImagesController {
 
     @FXML
@@ -22,18 +22,20 @@ public class DogImagesController {
     private ImageView dogImg1, dogImg2, dogImg3;
 
     @FXML
-    private Button showAnotherBtn, backBtn;
+    private Button backBtn;
 
 
+    // Handles the "Show Another" button click / Reloads new random images for the selected breed
     @FXML
-    void onShowAnotherClicked(ActionEvent event) {
+    void onShowAnotherClicked() {
         loadImages();
     }
 
+    // Handles the "Back" button click / Navigates back to the breed selection screen
     @FXML
-    void onBackClicked(ActionEvent event) {
+    void onBackClicked() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("breed-selection-view.fxml")); // ←あなたの前の画面のF XML ファイル名
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("breed-selection-view.fxml"));
             Scene root = new Scene(loader.load());
             Stage stage = (Stage) backBtn.getScene().getWindow();
             stage.setScene(root);
@@ -43,17 +45,20 @@ public class DogImagesController {
     }
 
     private Breed breed;
+    // Sets the selected breed and displays its name and images
     public void setBreed(Breed breed) {
         this.breed = breed;
         breedLabel.setText(breed.toString());
         loadImages();
     }
 
+    // Loads up to 3 random images of the selected breed using the Dog API / Handles edge cases where fewer than 3 images are returned
     public void loadImages() {
         try{
             DogApi api = new DogApi();
             List<String> imageUrls = api.fetchRandomImages(breed.getFullPath(), 3);
 
+            //  Clear previous images
             dogImg1.setImage(null);
             dogImg2.setImage(null);
             dogImg3.setImage(null);
@@ -69,7 +74,7 @@ public class DogImagesController {
                 dogImg1.setImage(new Image(imageUrls.get(0)));
                 dogImg2.setImage(new Image(imageUrls.get(1)));
             } else {
-                // 通常：3枚
+                // Default case: 3 images available
                 dogImg1.setImage(new Image(imageUrls.get(0)));
                 dogImg2.setImage(new Image(imageUrls.get(1)));
                 dogImg3.setImage(new Image(imageUrls.get(2)));
