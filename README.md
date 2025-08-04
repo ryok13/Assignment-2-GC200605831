@@ -27,5 +27,6 @@ Click "Show Another" to refresh the pictures.
 - Click `Back` to return to the search screen
 
 ## 🎥 Demo Video
+Pattern1(Choose from the list) : [here](https://go.screenpal.com/watch/cTjfeInI5uv)
 
-Coming soon...
+Pattern2(Input the keyword in search field & Select the bleed) : [here](https://go.screenpal.com/watch/cTjfeYnI5UZ)
