@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f2d694;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.georgiancollege.assignment2gc200605831.BreedSelectionController">
+   <children>
+      <ImageView fitHeight="59.0" fitWidth="63.0" layoutX="66.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/dog-icon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="163.0" layoutY="28.0" text="Get Dog Pictures From Breeds List" textFill="#2d911c">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <VBox alignment="CENTER" layoutX="394.0" layoutY="87.0" prefHeight="219.0" prefWidth="171.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Dog Breed:" textFill="#2d911c">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="searchField" promptText="Enter breed's name" />
+         </children>
+      </VBox>
+      <TableView fx:id="breedTable" layoutX="34.0" layoutY="87.0" prefHeight="298.0" prefWidth="323.0" style="-fx-background-color: #e39f40; -fx-background-radius: 10;">
+        <columns>
+          <TableColumn fx:id="subBreedColumn" minWidth="8.0" prefWidth="164.66668701171875" style="-fx-background-color: #e39f40; -fx-border-color: transparent white transparent transparent; -fx-alignment: CENTER;" text="SubBreed" />
+          <TableColumn fx:id="breedColumn" prefWidth="157.33328247070312" style="-fx-background-color: #e39f40; -fx-alignment: CENTER;" text="Breed" />
+        </columns>
+      </TableView>
+      <Button fx:id="showDogBtn" layoutX="438.0" layoutY="306.0" mnemonicParsing="false" onAction="#onShowDogBtnClick" text="Show Dog" textFill="#2d911c">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
