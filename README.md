@@ -30,3 +30,5 @@ Click "Show Another" to refresh the pictures.
 Pattern1(Choose from the list) : [here](https://go.screenpal.com/watch/cTjfeInI5uv)
 
 Pattern2(Input the keyword in search field & Select the bleed) : [here](https://go.screenpal.com/watch/cTjfeYnI5UZ)
+
+Patter3(If a user pushes the button without select or the keyword is wrong, errors pop out) : [here](https://go.screenpal.com/watch/cTjfetnI5vV) 
